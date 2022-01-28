@@ -10,12 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: CmdLine@2
+  - task: npmAuthenticate@0
     inputs:
-      script: "npm install -g vsts-npm-auth"
-  - task: CmdLine@2
-    inputs:
-      script: "vsts-npm-auth -config .npmrc"
+      workingFile: .npmrc
+  - script: npm ci
   - task: Gradle@2
     inputs:
       workingDirectory: ""
