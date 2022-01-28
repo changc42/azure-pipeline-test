@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: 'vsts-npm-auth -config .npmrc' 
+  - task: CmdLine@2
+    inputs:
+      script: "vsts-npm-auth -config .npmrc"
   - task: Gradle@2
     inputs:
       workingDirectory: ""
