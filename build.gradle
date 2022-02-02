@@ -30,6 +30,6 @@ node {
 task appNpmInstall(type: NpmTask) {
 	description = "Installs all dependencies from package.json"
 	workingDir = file("${project.projectDir}/src/main/react-frontend")
-	args = ["install", "--verbose"]
+	args = ["install"]
 }
 
