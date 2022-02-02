@@ -13,7 +13,7 @@ steps:
   - task: npmAuthenticate@0
     inputs:
       workingFile: .npmrc
-  - script: npm ci
+      customEndpoint: read uxt react
   - task: Gradle@2
     inputs:
       workingDirectory: ""
